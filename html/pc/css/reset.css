@@ -33,7 +33,7 @@ a{
 	outline: 0;
 }
 main, section, nav, article, aside, header, footer, address {
-	display: block;/* 块盒独占一行，行盒不换行。默认块盒：容器元素、h、p；默认行盒：span、a、image、video、audio */
+	display: block;/* 块盒独占一行，行盒不换行。默认块盒：容器元素、h、p；默认行盒（随内容沿伸，不能设置宽高！）：span、a、image、video、audio */
 }
 
 i,em,b,strong{
