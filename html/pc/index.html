@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="css/common.css"/>
 <link rel="stylesheet" href="css/index.css"/>
 </head>
-<body>
+<body style="background-color:rebeccapurple;padding: 20px 0;">
+<div class="container">111</div><!--body不定宽padding水平 0 ，容器按比例设宽90%（兼容不同用户浏览器大小，否则出现滚动条）-->
+
 <div class="" style="background-color:chartreuse;width:50px;height:32px;line-height:2;">踩踩踩</div>
 <!-- line-height 为数字时表示相对于当前元素字体的大小，line-height 代表文本上下间距 越大每行文本的距离越大，行高为容器高度，单行文本垂直居中 -->
 
@@ -78,6 +80,11 @@
         height: 400px;
         object-fit: cover;/*img 图片填充规则，比例*/
     }
+    .container{
+        background-color: antiquewhite;
+        width: 90%;
+        margin: auto;
+    }
 </style>
 
 <!-- 盒子排列：常规流，浮动，定位。   每个盒子都有它的包含块（即 父级块），父级决定了它的排列区域。包含块一般为父级的内容盒。-->
@@ -86,6 +93,6 @@
 
 <!-- 常规流块盒，上下外边距相邻（上下并列或者子父的margin会合并。解决加变宽或者用padding-top隔开，让其不相邻），会进行合并，取其中的最大值！！！！！-->
 
-<!-- 兼容性-->
+<!-- 文字环绕，横向排列： 用行块盒或浮动实现。  左右浮动： 浮动元素的包含块（和常规流一样是父级的内容块），一个元素浮动后 元素必定为块盒 display:block！！！其他属性尺寸设置和常规流一样。-->
 </body>
 </html>
