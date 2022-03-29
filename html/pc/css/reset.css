@@ -34,7 +34,7 @@ i,em,b,strong{
 	font-style: normal;
 	font-weight: normal;
 }
-
+/*清楚浮动*/
 .clear:after{
 	clear: both;
 	content: "";
