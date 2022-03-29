@@ -1,0 +1,45 @@
+@charset "uf-8";
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,menu,nav,section{
+	/*重置使能到顶，源于盒子模型的margin和padding透明且padding随内容块背景色*/
+	margin:0;
+	padding:0;
+	border: none;
+	list-style-type: none;
+	outline: none;
+}
+body {
+	opacity: 1;
+	background: white;
+	color: #000;
+	font-family:Microsoft YaHei,Arial;
+	font-weight:normal;
+	font-style: normal;
+	cursor: default;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+html, body {
+	font-size: 100%;/*相对于浏览器默认字体大小或继承body设定的字体大小.如body 10px 则html div 200% = 20px*/
+	/*1rem=16px*/
+}
+ul,ol, li {
+	list-style: none;
+}
+img {
+	border: 0;
+}
+a{text-decoration: none;color: #333; outline: 0;}
+main, section, nav, article, aside, header, footer, address {display: block;}/*块盒独占一行，行盒不换行*/
+
+i,em,b,strong{
+	font-style: normal;
+	font-weight: normal;
+}
+
+.clear:after{
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
