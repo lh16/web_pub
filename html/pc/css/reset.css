@@ -1,6 +1,6 @@
-@charset "uf-8";
+@charset "uf-8";/*菜鸟教程手册：https://www.runoob.com/html/html-lists.html*/
 body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,menu,nav,section{
-	/*重置使能到顶，源于盒子模型的margin和padding透明且padding随内容块背景色*/
+	/*重置使能到顶，源于盒子模型的margin和padding透明且padding随内容块背景色。 width、height设置的均是 盒子内容 的宽高，不含边距边框内同。由内而外依次为：内容盒，填充盒，变框盒。*/
 	margin:0;
 	padding:0;
 	border: none;
@@ -18,7 +18,7 @@ body {
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 html, body {
-	font-size: 100%;/*相对于浏览器默认字体大小或继承body设定的字体大小.如body 10px 则html div 200% = 20px*/
+	font-size: 100%;/*字体大小：相对于浏览器默认字体大小或继承body设定的字体大小.如body 10px 则html div 200% = 20px.除了IE8之外,所有浏览器的默认font-size值都为16px*/
 	/*1rem=16px*/
 }
 ul,ol, li {
@@ -27,8 +27,14 @@ ul,ol, li {
 img {
 	border: 0;
 }
-a{text-decoration: none;color: #333; outline: 0;}
-main, section, nav, article, aside, header, footer, address {display: block;}/*块盒独占一行，行盒不换行*/
+a{
+	text-decoration: none;
+	color: #333;
+	outline: 0;
+}
+main, section, nav, article, aside, header, footer, address {
+	display: block;/* 块盒独占一行，行盒不换行。默认块盒：容器元素、h、p；默认行盒：span、a、image、video、audio */
+}
 
 i,em,b,strong{
 	font-style: normal;
