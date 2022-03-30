@@ -1,0 +1,73 @@
+body{
+    line-height: 1.42857;
+    color: #404040;
+    background-color: #f9f9f9;
+    font-family: -apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-feature-settings: "tnum";
+    font-variant: tabular-nums;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    background-color: white;
+    height: 1024px;
+}
+
+.nav{
+    /*background-color:white;*/
+    width: 100%;
+
+}
+.nav .nav_cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    z-index: 100;
+}
+.nav .nav_last {
+    position: relative;
+    display: block;
+    height: 56px;
+}
+.nav .nav_cont .nav_cont_main{
+    height: 56px;
+    min-width: 1200px;
+    max-width: 1440px;
+    margin: 0 auto;
+    transition: transform .3s cubic-bezier(.645,.045,.355,1);
+}
+.main {
+    padding-top: 10px;
+}
+.main .main_cont{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 66px);
+    font-size: 16px;
+
+    box-sizing: content-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+.nav .title_img {
+    float: left;
+    color: #ec7259;
+    margin: 0 30px;
+    display: flex;/*弹性布局 居中*/
+    align-items: center;/*弹性布局 居中*/
+    height: 56px;
+}
+.nav .title_img_svg {
+    fill: currentColor;
+    vertical-align: middle;
+}
