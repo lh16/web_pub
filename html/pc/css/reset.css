@@ -41,7 +41,7 @@ i,em,b,strong{
 	font-weight: normal;
 }
 /*清楚浮动*/
-.clear:after{
+.clear::after{
 	clear: both;
 	content: "";
 	display: block;
