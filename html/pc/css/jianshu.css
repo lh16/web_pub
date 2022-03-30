@@ -35,13 +35,49 @@ body,html{
     display: block;
     height: 56px;
 }
-.nav .nav_cont .nav_cont_main{
+.nav .nav_cont_main{
     height: 56px;
     min-width: 1200px;
     max-width: 1440px;
     margin: 0 auto;
     transition: transform .3s cubic-bezier(.645,.045,.355,1);
 }
+.nav .nav_title_img {
+    float: left;
+    color: #ec7259;
+    margin: 0 30px;
+    display: flex;/*弹性布局 居中*/
+    align-items: center;/*弹性布局 居中*/
+    height: 56px;
+}
+.nav .nav_title_img_svg {
+    fill: currentColor;
+    vertical-align: middle;/*这里有点问题，调试样式并无作用效果。且官方认为，父级设置设为Flex布局以后，子元素的float、clear和vertical-align属性将失效*/
+}
+.nav .nav_cont_right {
+    float: right;
+    margin: 0 16px;
+}
+
+.nav_cont_right_anticon{
+    cursor: pointer;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.nav_cont_v{
+    margin: 0 8px;
+    height: 48px;
+    font-size: 24px;
+    color: #999;
+    display: flex;
+    align-items: center;
+}
+
 .main {
     padding-top: 10px;
 }
@@ -58,16 +94,4 @@ body,html{
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
-}
-.nav .title_img {
-    float: left;
-    color: #ec7259;
-    margin: 0 30px;
-    display: flex;/*弹性布局 居中*/
-    align-items: center;/*弹性布局 居中*/
-    height: 56px;
-}
-.nav .title_img_svg {
-    fill: currentColor;
-    vertical-align: middle;
 }
