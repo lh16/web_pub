@@ -24,7 +24,7 @@ button, input, optgroup, select, textarea {
     background-color: white;
     height: 1024px;
 }
-
+/*顶部导航区域*/
 .nav{
     /*background-color:white;*/
     width: 100%;
@@ -35,7 +35,7 @@ button, input, optgroup, select, textarea {
     top: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
+    /*overflow: hidden; 会把下拉菜单拦住*/
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,.05);
     z-index: 100;
@@ -114,6 +114,12 @@ button, input, optgroup, select, textarea {
     align-items: center;
     height: 56px;
 }
+.nav .nav_cont_right_img_a:hover{/*鼠标滑过效果*/
+    background-color: #f5f5f5;
+}
+/*.nav_cont_right_img_a:hover .dropdown-menu{ 该效果不能生效不知道为啥，只能JS了吗
+ display: block;
+}*/
 .nav .nav_cont_right_img {
     border-radius: 50%;
     width: 40px;
@@ -199,19 +205,19 @@ button, input, optgroup, select, textarea {
     left: auto;
     border-radius: 0 0 4px 4px;
 }
-.dropdown-menu {
+.nav .dropdown-menu {
     margin-top: 0;
     border-color: transparent;
     box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
     filter: drop-shadow(0 2px 8px rgba(0,0,0,.1));
     -webkit-filter: drop-shadow(0 2px 8px rgba(0,0,0,.1));
 }
-.dropdown-menu {
+.nav .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
-   /* display: none;*/
+   /*display: none;*/
     float: left;
     min-width: 160px;
     padding: 5px 0;
@@ -258,6 +264,11 @@ a {
     color: #ea6f5a;
     vertical-align: middle;
 }
+@font-face {
+    font-family: iconfont;
+    src: url( https://cdn2.jianshu.io/assets/fonts/web/iconfont-e093bb0217ccb9145ad1ce9fe0be18b2.eot);
+    src: url( https://cdn2.jianshu.io/assets/fonts/web/iconfont-e093bb0217ccb9145ad1ce9fe0be18b2.eot#iefix) format("embedded-opentype"),url("https://at.alicdn.com/t/font_125126_ndt24abtqwd.woff2?t=1639536569963") format("woff2"),url("https://at.alicdn.com/t/font_125126_ndt24abtqwd.woff?t=1639536569963") format("woff"),url("https://at.alicdn.com/t/font_125126_ndt24abtqwd.ttf?t=1639536569963") format("truetype"),url(https://cdn2.jianshu.io/assets/fonts/web/iconfont-09f60133defd370096b7064f6bb4fd38.svg#iconfont) format("svg")
+}
 .iconfont {
     font-family: iconfont!important;
     font-size: inherit;
@@ -266,7 +277,38 @@ a {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.nav .dropdown-menu i {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #ea6f5a;
+    vertical-align: middle;
+}
+.ic-icon_mine:before {
+    content: "\E68D";
+}
+.ic-icon_collection:before {
+    content: "\E689";
+}
+.ic-icon_like:before {
+    content: "\E687";
+}
+.ic-icon_purchased:before {
+    content: "\E68A";
+}
+.ic-icon_wallet:before {
+    content: "\E68B";
+}
+.ic-icon_setting:before {
+    content: "\E688";
+}
+.ic-icon_help:before {
+    content: "\E686";
+}
+.ic-icon_logout:before {
+    content: "\E68C";
+}
 
+/*主体区域*/
 .main {
     padding-top: 10px;
 }
