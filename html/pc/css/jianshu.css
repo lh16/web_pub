@@ -315,7 +315,7 @@ a {
 }
 .main .main_cont{
     background-color: #fff;
-    display: flex;
+    display: flex;/*这个流布局属性很重要，使子元素可以单个不换行而类似浮动排列（左右部分）！！！*/
     justify-content: center;
     align-items: flex-start;
     min-height: calc(100vh - 66px);
@@ -328,3 +328,30 @@ a {
     margin-right: auto;
     width: 1000px;
 }
+.main .main_cont_left{
+    flex-shrink: 0;
+    margin-bottom: 24px;
+    margin-right: 10px;
+    width: 730px;
+}
+.main_cont_left_section{
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.main_cont_right{
+    flex-shrink: 0;
+    width: 260px;
+}
+.main_cont_right_section {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+}
+
