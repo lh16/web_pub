@@ -57,6 +57,7 @@ body,html{
 .nav .nav_cont_right {
     float: right;
     margin: 0 16px;
+    display: flex;
 }
 
 .nav_cont_right_anticon{
@@ -76,6 +77,70 @@ body,html{
     color: #999;
     display: flex;
     align-items: center;
+}
+.nav .nav_cont_right_zuan {
+    cursor: pointer;
+    margin: 0 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;/*居中两件套*/
+    align-items: center;
+}
+
+.nav .nav_cont_right_zuan_svg  {
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.nav .nav_cont_right_img_a {
+    padding: 0 12px;
+    margin-right: 8px;
+    color: #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+.nav .nav_cont_right_img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+}
+
+.nav img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.nav .nav_cont_menu {
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+.nav .nav_cont_menu_anvlist {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+.nav .nav_cont_menu_anvlist_a {
+    font-size: 17px;
+    color: #333;
+    padding: 0 20px;/*是不是因为magin挨在一起会合并所以用padding 拉开间隔*/
+    cursor: pointer;
+    display: flex;/*这个属性是不是可以替代浮动了*/
+    align-items: center;/*align-items: center 垂直居中； justify-content:center 水平居中*/
+    /*justify-content:center;*/
+    height: 56px;
+}
+.nav .nav_cont_menu_anvlist_aa, .nav_cont_menu_anvlist_aa:active, .nav_cont_menu_anvlist_aa:hover {
+    color: inherit;
 }
 
 .main {
