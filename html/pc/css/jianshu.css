@@ -311,8 +311,10 @@ a {
 /*主体区域*/
 .main {
     padding-top: 10px;
+    background-color: #f9f9f9;
 }
 .main .main_cont{
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: flex-start;
