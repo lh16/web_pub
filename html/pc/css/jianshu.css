@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #404040;
     text-rendering: optimizelegibility;
 }
+img {
+    vertical-align: middle;
+    border-style: none;
+}
 .container{
     background-color: white;
     height: 1024px;
@@ -510,4 +514,78 @@ a {
 .c_main_cont_right_story_review_story_listitem_con_review {
     font-size: 12px;
     color: #969696;
+}
+.main_cont_left_section_article_title {
+    font-size: 30px;
+    font-weight: 700;
+    word-break: break-word;
+    margin-top: 32px;
+}
+.main_cont_left_section_article_author {
+    display: flex;
+    justify-content: space-between;/*这个布局属性使 后面编辑文章的 a标签 靠右浮动！！*/
+    align-items: center;
+    margin-bottom: 32px;
+    font-size: 13px;
+}
+.main_cont_left_section_article_author_info {
+    display: flex;
+    align-items: center;
+}
+.main_cont_left_section_article_author_info_img_a {
+    position: relative;
+}
+.main_cont_left_section_article_author_info_img {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    min-width: 50px;
+    min-height: 50px;
+    width: 50px;
+    height: 50px;
+}
+.main_cont_left_section_article_author_info_right_top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.main_cont_left_section_article_author_info_right_top_span {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+.main_cont_left_section_article_author_info_right_top_icon {
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+.main_cont_left_section_article_author_info_right_top_icon_img {
+    display: block;
+}
+.main_cont_left_section_article_author_info_right_bottom {
+    display: flex;
+    color: #969696;
+}
+.main_cont_left_section_article_author_info_right_bottom_zuan {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ec7259;
+}
+.main_cont_left_section_article_author_info_right_bottom_zuan i {
+    margin-right: .5em;
+}
+.main_cont_left_section_article_author_info_right_bottom>:not(:last-child) {/*利用属性  右边距拉开间隔！！！*/
+    margin-right: 10px;
+}
+.anticon {
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
