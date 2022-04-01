@@ -20,6 +20,19 @@ button, input, optgroup, select, textarea {
     font-family: inherit;
     line-height: inherit;
 }
+a {
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    -webkit-text-decoration-skip: objects;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #404040;
+    text-rendering: optimizelegibility;
+}
 .container{
     background-color: white;
     height: 1024px;
@@ -423,4 +436,70 @@ a {
 .main_cont_right_meinfo_view_right_bottom {
     color: #969696;
     font-size: 12px;
+}
+.main_cont_right_meinfo_mid_line {
+    width: 100%;
+    height: 1px;
+    margin: 16px 0;
+    background-color: #eee;
+}
+.main_cont_right_meinfo_listitem {
+    margin-top: 16px;
+}
+.main_cont_right_meinfo_listitem_title {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2d2d2d;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.main_cont_right_meinfo_listitem_title:hover a{
+    text-decoration: underline;
+}
+.main_cont_right_meinfo_listitem_review {
+    font-size: 12px;
+    color: #969696;
+}
+
+.main_cont_right_story_review {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.c_main_cont_right_story_review_toptitle {/*可以i或者c开头来区分是类似id层专属样式还是通用class样式*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 4px solid #ec7259;
+    font-size: 18px;
+    font-weight: 500;
+    height: 20px;
+    line-height: 20px;
+}
+.c_main_cont_right_story_review_toptitle_t {
+    font-size: 16px;
+    padding-left: 6px;
+    height: 18px;
+}
+.c_main_cont_right_story_review_story_listitem_con {
+    margin-bottom: 12px;
+}
+.c_main_cont_right_story_review_story_listitem_con_title {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
