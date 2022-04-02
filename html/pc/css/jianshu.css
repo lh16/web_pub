@@ -83,7 +83,7 @@ img {
     float: left;
     color: #ec7259;
     margin: 0 30px;
-    display: flex;/*弹性布局 居中*/
+    display: flex;/*弹性布局 居中。 H5的属性，可以快速完成大部分float属性实现的功能*/
     align-items: center;/*弹性布局 居中*/
     height: 56px;
 }
