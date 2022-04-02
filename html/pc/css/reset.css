@@ -18,8 +18,8 @@ body {
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 html, body {
-	font-size: 100%;/*字体大小：相对于浏览器默认字体大小或继承body设定的字体大小.如body 10px 则html div 200% = 20px.除了IE8之外,所有浏览器的默认font-size值都为16px*/
-	/*1rem=16px*/
+	font-size: 100%;/*字体大小：body字体如果设置相对大小则就是相对于浏览器默认字体大小。或继承body设定的字体大小.如body 10px 则html div中的字体 200% = 20px.除了IE8之外,所有浏览器的默认font-size值都为16px*/
+	/*总结：body字体可以自己设置大小也可以相对于浏览器默认大小设置百分比。 rem单位可以相对于html根元素设置大小。 rem为相对大小单位，相对的只是HTML根元素的字体大小。如果如上设置，则根下面的元素 1rem=16px*/
 }
 ul,ol, li {
 	list-style: none;
