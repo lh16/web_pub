@@ -84,7 +84,7 @@ img {
     float: left;
     color: #ec7259;
     margin: 0 30px;
-    display: flex;/*弹性布局 居中。 H5的属性，可以快速完成大部分float属性实现的功能*/
+    display: flex;/*弹性布局 居中。 H5的属性，可以快速完成大部分float属性实现的功能。用了Flex布局，float、position、vertical-align和与之配合的line-height等老朋友见面的次数就很少了。（http://dongjunhui.com/archives/134/）*/
     align-items: center;/*弹性布局 居中*/
     height: 56px;
 }
