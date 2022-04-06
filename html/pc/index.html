@@ -112,5 +112,30 @@
 <!--  如何做自适应：https://segmentfault.com/a/1190000015759719?utm_source=tag-newest
 1.自适应->简易场景实现自适应：浮动、页面居中、元素宽度不写固定而设置百分比（50%,auto）自动匹配大小。这样在页面宽度发生变化时，能利用以上特性实现简易的自适应效果。
 2.响应式->PC，平板，移动三端。如果实际开发中有复杂场景的需求，一般通过编写多套CSS代码，然后用使用媒体查询(Media Query) @media结合 rem字体（先设置html字体大小font-size，其他子元素按这个值rem比例来设置），让页面根据不同屏幕尺寸来加载不同代码模块以实现适配不同屏幕的目的。这种方式需要编写多套代码，虽然工作量大，但对于不同屏幕尺寸的设备都有单独一套CSS代码，维护起来更方便。（https://www.cnblogs.com/xiong88/p/12822891.html）
+（比如：
+@media screen and (min-width:1000px){
+　　html,body{
+　　　font-size:.8rem;
+　　}
+}  对应PC端页面
+@media screen and (max-width:1000px) and (min-width:768px){
+　　html,body{
+　　　font-size:.7rem;
+　　}
+} 对应平板端页面
+@media screen and (max-width:768px){
+　　html,body{
+　　　font-size:.6rem;
+　　}
+} 对应手机端页面
+或者通过媒体查询选择性加载css 文件：
+<link rel="stylesheet" type="text/css"
+        media="screen and (min-width: 400px) and (max-device-width: 600px)"
+        href="smallScreen.css" />
+以上代码表示：如果屏幕宽度在400像素到600像素之间，则加载smallScreen.css文件。
+
+注意！使用响应式，宽度使用百分比，尽量少使用绝对值宽度5px。由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用具有绝对宽度的元素。
+移动端字体也不能使用绝对大小（px），而只能使用相对大小（em）或者高清方案（rem）,rem不局限于字体大小，前面的宽度width也可以使用来代替百分比。
+）
 3.响应式->PC，平板，移动三端。响应式布局是指根据不同屏幕尺寸自动调整页面显示效果实现自适应(实现原理也要用到媒体查询技术@media)。响应式布局一般有栅格系统布局，flex布局。bootstrap框架/插件(引入css和js文件就可以用了)的核心就是栅格系统。
 -->
