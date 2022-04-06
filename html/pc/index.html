@@ -141,7 +141,7 @@
 另一种：以vw作为布局单位(好文：https://blog.csdn.net/weixin_29026387/article/details/112940752)，根据设计稿的尺寸转换为vw单位  如下：
 //640px作为设计稿基准
 $vm_base: 640;
-@function vm($px) { //SASS函数编译。（sass 世界上最成熟、最稳定、最强大的专业级CSS扩展语言 https://www.sass.hk/ ---可以动态编写css代码，浏览器并不支持Sass因此通过编译最终转为css代码）
+@function vm($px) { //SASS函数编译。（sass 世界上最成熟、最稳定、最强大的专业级CSS扩展语言 https://www.sass.hk/，同类型的有less（不同：less可以less.js直接用或者编译成css） ------ 可以动态编写css代码，浏览器并不支持Sass因此通过编译最终转为css代码）
     @return ($px / 640) * 100vw;
 }
 
@@ -152,4 +152,13 @@ $vm_base: 640;
 //vw vh vmin vmax。其中vmin相对于视口的宽度或高度中较小的那个。其中vmax相对于视口的宽度或高度中较大的那个。通过vmin 和 vmax 可以做 移动端手机旋转的样式。
 ）
 3.响应式->PC，平板，移动三端。响应式布局是指根据不同屏幕尺寸自动调整页面显示效果实现自适应(实现原理也要用到媒体查询技术@media)。响应式布局一般有栅格系统布局，flex布局。bootstrap框架/插件(引入css和js文件就可以用了)的核心就是栅格系统。
+-->
+
+<!--vue 是一个js库/插件，类似jquery,不管CSS，但有区别于JQ，管前后端数据绑定渲染前端UI。同类型：前端三大主流框架React、Vue、Angular。  React有class 概念动态渲染数据，小程序开发可以推荐使用（https://blog.csdn.net/cpongo3/article/details/90259111）。
+
+
+
+Ant Design of React：antd 是基于 Ant Design 设计体系的 React UI 组件库。（https://ant.design/docs/react/introduce-cn）
+Ant Design Vue： 是遵循 Ant Design 的 Vue 组件库。是蚂蚁金服 Ant Design 官方唯一推荐的 Vue 版 UI 组件库，它其实是 Ant Design 的 Vue 实现，组件的风格与 Ant Design 保持同步，组件的 html 结构和 css 样式也保持一致。
+类似管CSS的组件（可用于写管理端）还有layui组件,boostrap组件，非主流vue-framework-wz 组件......
 -->
