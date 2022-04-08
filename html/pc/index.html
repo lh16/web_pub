@@ -141,7 +141,7 @@
 另一种：以vw作为布局单位(好文：https://blog.csdn.net/weixin_29026387/article/details/112940752)，根据设计稿的尺寸转换为vw单位  如下：
 //640px作为设计稿基准
 $vm_base: 640;
-@function vm($px) { //SASS函数编译。（sass 世界上最成熟、最稳定、最强大的专业级CSS扩展语言 https://www.sass.hk/，同类型的有less（不同：less可以less.js直接用或者编译成css） ------ 可以动态编写css代码，浏览器并不支持Sass因此通过编译最终转为css代码）
+@function vm($px) { //SASS函数编译。（sass语法编译： 世界上最成熟、最稳定、最强大的专业级CSS扩展语言 https://www.sass.hk/，同类型的有less.js语法（不同：less可以less.js直接用或者编译成css） ------ 可以动态编写css代码，浏览器并不支持Sass因此通过编译最终转为css代码）
     @return ($px / 640) * 100vw;
 }
 
