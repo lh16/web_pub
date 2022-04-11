@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsbase</title>
+</head>
+<body>
+<script>
+/*
+JavaScript 中的所有事物都是对象：字符串、数值、数组、函数...此外，JavaScript 允许自定义对象。对象只是一种特殊的数据。对象拥有属性和方法。所有的 JavaScript 对象都会从一个 prototype（原型对象）中继承属性和方法。
+//对象是可变的，它们是通过引用来传递的！！！
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+var x = person;// 不会创建 person 的副本，是引用
+x.age = 10;           //  x.age 和 person.age 都会改变
+
+如何自定义自己的对象：
+1.是用 Object
+person=new Object();
+person.firstname="John";
+person.lastname="Doe";
+person.age=50;
+person.eyecolor="blue";
+
+2.使用对象字面量 var person={firstname:"John",lastname:"Doe",age:50,eyecolor:"blue"};
+
+3.使用对象构造器（即使用函数来构造对象） ---->  对象函数类似class => new 函数得到一个对象实例。
+
+JavaScript 类
+JavaScript 是面向对象的语言，但 JavaScript 不使用类！！！(在ES6  有了class的概念就可以直接使用class的方式了！！！)
+在 JavaScript 中，不会创建类，也不会通过类来创建对象（就像在其他面向对象的语言中那样）。
+JavaScript 基于 prototype，而不是基于类的！！！！(所有的 JavaScript 对象都会从一个 prototype（原型对象）中继承属性和方法,Date 对象从 Date.prototype 继承,Array 对象从 Array.prototype 继承,person 对象从 person.prototype 继承)
+
+function person(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+}
+一旦您有了对象构造器，就可以创建新的对象实例，就像这样：
+var myFather=new person("John","Doe",50,"blue");
+var myMother=new person("Sally","Rally",48,"green");
+在一个已存在构造器的对象中是不能添加新的属性：person.nationality = "English";要在在构造器函数中添加this.nationality = "English";
+使用 prototype 属性就可以给对象的构造函数添加新的属性：person.prototype.nationality = "English";person.prototype.name = function() {
+  return this.firstName + " " + this.lastName;
+};
+
+在JavaScript中，this通常指向的是我们【正在执行的函数本身】，或者是指向该函数【所属的对象（运行时）】！！！！
+
+对象函数：new 和不 new的区别：
+如果 new 了函数内的 this 会指向当前这个 person 并且就算函数内部不 return 也会返回一个对象。
+如果不 new 的话函数内的 this 指向的是 window。*/
+/*
+function person(firstname,lastname,age,eyecolor)
+{
+    this.firstname=firstname;
+    this.lastname=lastname;
+    this.age=age;
+    this.eyecolor=eyecolor;
+    return [this.firstname,this.lastname,this.age,this.eyecolor,this]
+}
+
+var myFather=new person("John","Doe",50,"blue");
+var myMother=person("Sally","Rally",48,"green");
+console.log(myFather) // this 输出一个 person 对象
+console.log(myMother) // this 输出 window 对象
+*/
+//----------------------
+/*面向对象语言中 this 表示当前对象的一个引用。=>  总结为 this总代表它上层所属的对象！！！！
+
+但在 JavaScript 中 this 不是固定不变的，它会随着执行环境的改变而改变。
+
+在方法中，this 表示该方法所属的对象。
+如果单独使用，this 表示全局对象。
+在函数中，this 表示全局对象。
+在函数中，在严格模式下，this 是未定义的(undefined)。
+在事件中，this 表示接收事件的元素。
+类似 call() 和 apply() 方法可以将 this 引用到任何对象。*/
+
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;//在对象方法中， this 指向调用它所在方法的对象。fullName 方法所属的对象就是 person。  this.firstName即person.firstName
+    }
+};
+var x = this;//单独使用 this，则它指向全局(Global)对象。在浏览器中，window 就是该全局对象为 [object Window]:
+function myFunction() {//在函数中，函数的所属者默认绑定到 this 上。在浏览器中，window 就是该全局对象为 [object Window]:
+    return this;
+}
+//显式函数绑定
+/*在 JavaScript 中函数也是对象，对象则有方法，apply 和 call 就是函数对象的方法。这两个方法异常强大，他们允许切换函数执行的上下文环境（context），即 this 绑定的对象。在下面实例中，当我们使用 person2 作为参数来调用 person1.fullName 方法时, this 将指向 person2, 即便它是 person1 的方法:*/
+var person1 = {
+    fullName: function(sayhello) {
+        return this.firstName + " " + this.lastName + sayhello;
+    }
+}
+var person2 = {
+    firstName:"John",
+    lastName: "Doe",
+}
+person1.fullName.call(person2,'hello');  // 返回 "John Doe hello"
+/*每个函数都包含两个非继承而来的方法：apply()和call()。他们的用途相同，都是在特定的作用域中调用函数。
+接收参数方面不同：
+apply()接收两个参数，一个是函数运行的作用域(this)，另一个是参数数组！！！！person1.fullName.apply(person2,['hello']);
+call()方法第一个参数与apply()方法相同，是个对象代表函数中的this作用域，但传递给函数的参数必须列举出来（不是一个数组）。（见上面的例子）
+类似的有bind()方法,它是属于ECMAScript5的方法。
+window.color = "red";
+var o = { color: "blue" };
+function sayColor(){
+alert(this.color);
+}
+var OSayColor = sayColor.bind(o);
+OSayColor(); //blue
+*/
+</script>
+</body>
+</html>
