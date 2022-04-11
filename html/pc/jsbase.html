@@ -151,6 +151,44 @@ function Person(){
 }
 
 var person = new Person();*/
+
+//Promise 对象。promise 是一个 ECMAScript 6 提供的类，目的是更加优雅地书写复杂的异步任务。
+new Promise(function (resolve, reject) {//异步执行，成功回调函数resolve
+    console.log(1111);
+    resolve(2222);
+}).then(function (value) {//then 顺序执行，value 为上一个的return 结果2222
+    console.log(value);
+    return 3333;
+}).then(function (value) {//3333
+    console.log(value);
+    throw "An error";
+}).catch(function (err) {
+    console.log(err);
+});
+/* 非常适合用于 某个接口一定要在某个接口之后调用的场景，就可以不用ajax回调里嵌套！！
+执行结果：
+1111
+2222
+3333
+An error
+*/
+/*
+// 使用promise的方式实现ajax
+function ajax(url) {
+    return new Promise(function(resolve, reject) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('Get'); // 定义请求方式
+        xhr.responseType = 'json'; // 定义返回值类型
+        xhr.onload = function() {
+            if(this.status === 200) {
+                resolve(this.response);
+            } else {
+                reject(new Error(this.statusText));
+            }
+        }
+        xhr.send();
+    })
+}*/
 </script>
 </body>
 </html>
