@@ -66,7 +66,7 @@ console.log(myFather) // this 输出一个 person 对象
 console.log(myMother) // this 输出 window 对象
 */
 //----------------------
-/*面向对象语言中 this 表示当前对象的一个引用。=>  总结为 this总代表它上层对象或上层所属的对象！！！！
+/*面向对象语言中 this 表示当前对象的一个引用。=>  总结为 this总代表它所属上层对象（要是所属于的，只在内部但没关系的不算）或上层所属的对象！！！！（箭头函数中的this除外可以非所属，见下面例子）
 
 但在 JavaScript 中 this 不是固定不变的，它会随着执行环境的改变而改变。
 
@@ -114,6 +114,43 @@ alert(this.color);
 var OSayColor = sayColor.bind(o);
 OSayColor(); //blue
 */
+
+//--------------
+/*
+ES6 箭头函数中的this 可以直接指向 原本非所属的上级函数对象！！！！
+当然，箭头函数不仅仅是让代码变得简洁，函数中 this 总是绑定总是指向对象自身。具体可以看看下面几个例子：
+
+function Person() {
+  this.age = 0;
+
+  setInterval(function growUp() {
+    // 在非严格模式下，growUp() 函数的 this 指向 window 对象
+    this.age++;
+  }, 1000);
+}
+var person = new Person();
+我们经常需要使用一个变量来保存 this，然后在 growUp 函数中引用：
+
+function Person() {
+  var self = this;
+  self.age = 0;
+
+  setInterval(function growUp() {
+    self.age++;
+  }, 1000);
+}
+而使用箭头函数可以省却这个麻烦：
+
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    // |this| 指向 person 对象
+    this.age++;
+  }, 1000);
+}
+
+var person = new Person();*/
 </script>
 </body>
 </html>
