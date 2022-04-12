@@ -1,5 +1,19 @@
 /*每个js文件都是一个独立的模块。模块名即文件夹名*/
 /*
+几种模块化规范----语法不一样！！（https://www.jianshu.com/p/8f6770f1f751）：
+=》ES6  JS语法（高版本浏览器直接支持可以跑）
+=》CommonJs    node.js语法   （微信小程序使用的是commonjs的规范）：
+module.exports={
+  name:"我是抛出的模块"
+}
+引用模块
+let com=require("component.js")
+
+=》AMD
+=》CMD
+*/
+
+/*
 es6模块化基本语法：
 默认导出与默认导入
 按需导出与按需导入
