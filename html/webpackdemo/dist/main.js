@@ -1,0 +1,1 @@
+(()=>{var r={537:()=>{document.write("欢迎阅读webpack入门教程")}},e={};!function t(o){var n=e[o];if(void 0!==n)return n.exports;var p=e[o]={exports:{}};return r[o](p,p.exports,t),p.exports}(537)})();
