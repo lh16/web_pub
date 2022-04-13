@@ -1,12 +1,12 @@
 const path = require('path');
 const webpack = require('webpack'); 
-module.exports = {
-	devtool : 'source-map',//默认none将不生成 source map文件（暴露危险）。值有source-map(报错跟踪debug用),hidden-source-map,nosources-source-map。文档：https://www.webpackjs.com/configuration/devtool/
-	mode : 'production',//这项不配置的话运打包命令会报警告信息："WARNING in configuration The 'mode' option has not been set, ..."//development为开发者环境，production为生产环境变量 ，还有一个为none
-    entry:{
+module.exports = {//配置项参数说明：https://webpack.html.cn/   https://www.jianshu.com/p/681cef8ea53f
+	devtool : 'source-map',//调试模式source-map配置：devtool 配置浏览器的调试信息，报错时如何显示：默认none将不生成 source map文件（暴露危险）。值有source-map(报错跟踪debug用),hidden-source-map,nosources-source-map。文档：https://www.webpackjs.com/configuration/devtool/
+	mode : 'production',//mode 指定构建模式。这项不配置的话运打包命令会报警告信息："WARNING in configuration The 'mode' option has not been set, ..."//development为开发者环境，production为生产环境变量 ，还有一个为none
+    entry:{//入口配置
         app:__dirname+'/src/app.js',//唯一入口文件,__dirname是nodejs里的一个全局变量，它指向的是我们项目的根目录
     },
-    output:{
+    output:{//出口配置
         path: path.resolve(__dirname, './dist'),//打包后的文件存放的地方
         filename:'bundle.js'   //打包后输出文件的文件名（注意html的文件名要从默认main.js改为bundle.js）
     }
@@ -27,7 +27,7 @@ module.exports = {
 //安装所需依赖之后，要使用babel-loader需要在Webpack的配置文件中进行如下配置：
 /*module.exports = {
     module: {
-        rules: [
+        rules: [   //文件处理loader配置: module的rules属性，将所有匹配的文件都通过对应的loader进行处理
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -37,7 +37,7 @@ module.exports = {
                         // 预设集合
                         presets: ['@babel/preset-env'],
                         // 插件集合
-                        plugins: [
+                        plugins: [   //plugins 实例化所有引入的插件
                             // 使用其他插件
                         ]
                     }
