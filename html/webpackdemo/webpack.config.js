@@ -20,7 +20,36 @@ module.exports = {
 //"dev":"webpack --mode development"     npm run dev   开发模式（与生产模式打包压缩后的代码不一样，体积较大）
 //"build":"webpack --mode production"     npm run build  生产模式（webpack 会将 production 作为 mode 的默认值去设置）
 
-//反编译与source map：
+
+//Babel是一个工具链，主要用于将ECMAScript 2015+版本的代码转换为向后兼容的JavaScript代码，使之可以运行在各种环境中。(https://blog.csdn.net/sinat_41212418/article/details/121779790)
+//【Babel用于处理JavaScript代码实现在不同运行环境的兼容，其可以单独使用，也可以集成到各种构建工具中去，本章节着重讲一下如何在Webpack中集成Babel。！！！】
+//第三方库依赖 安装命令：npm install --save-dev babel-loader @babel/core @babel/preset-env -D
+//安装所需依赖之后，要使用babel-loader需要在Webpack的配置文件中进行如下配置：
+/*module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        // 预设集合
+                        presets: ['@babel/preset-env'],
+                        // 插件集合
+                        plugins: [
+                            // 使用其他插件
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}//上面配置中针对JavaScript文件，使用了babel-loader进行处理，在options配置中告诉了Babel要使用哪些预设和插件进行JavaScript代码的处理。*/
+
+
+
+//webpack反编译与source map：
 //浏览器端的js代码一般都是压缩的。通过webpack、grunt、gulp 、 etc 的一些ugly 插件压缩打包后，会生成一个 source map的映射文件，将行映射成列的。所以只要有source map 都可以还原，没有的话，就别想了，只能格式化下。
 //node反编译插件库： https://github.com/1egoman/debundle
 //vue的source map配置需要关闭 : https://blog.csdn.net/weixin_31047023/article/details/113687529
