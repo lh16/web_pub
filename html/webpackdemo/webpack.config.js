@@ -24,4 +24,6 @@ module.exports = {
 //浏览器端的js代码一般都是压缩的。通过webpack、grunt、gulp 、 etc 的一些ugly 插件压缩打包后，会生成一个 source map的映射文件，将行映射成列的。所以只要有source map 都可以还原，没有的话，就别想了，只能格式化下。
 //node反编译插件库： https://github.com/1egoman/debundle
 //vue的source map配置需要关闭 : https://blog.csdn.net/weixin_31047023/article/details/113687529
+//前端打包优化，且uglifyjs可以对webpack打包后的js文件进行再次压缩混淆（H5游戏前端加密方案参考）：   https://blog.csdn.net/LiuBo_1999/article/details/117549295
+//uglifyjs 可以不依赖webpack单独压缩js文件
 
