@@ -22,4 +22,5 @@ module.exports = {
 
 //浏览器端的js代码一般都是压缩的。通过webpack、grunt、gulp 、 etc 的一些ugly 插件压缩打包后，会生成一个 source map的映射文件，将行映射成列的。所以只要有source map 都可以还原，没有的话，就别想了，只能格式化下。
 //https://github.com/1egoman/debundle
+//vue : https://blog.csdn.net/weixin_31047023/article/details/113687529
 
