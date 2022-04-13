@@ -19,3 +19,7 @@ module.exports = {
 //"dev":"webpack --mode development"     npm run dev   开发模式（与生产模式打包压缩后的代码不一样，体积较大）
 //"build":"webpack --mode production"     npm run build  生产模式（webpack 会将 production 作为 mode 的默认值去设置）
 
+
+//浏览器端的js代码一般都是压缩的。通过webpack、grunt、gulp 、 etc 的一些ugly 插件压缩打包后，会生成一个 source map的映射文件，将行映射成列的。所以只要有source map 都可以还原，没有的话，就别想了，只能格式化下。
+//https://github.com/1egoman/debundle
+
