@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack'); 
 module.exports = {
-	devtool : 'source-map',//默认none将不生成 source map文件（暴露危险）。值有source-map,hidden-source-map,nosources-source-map。文档：https://www.webpackjs.com/configuration/devtool/
+	devtool : 'source-map',//默认none将不生成 source map文件（暴露危险）。值有source-map(报错跟踪debug用),hidden-source-map,nosources-source-map。文档：https://www.webpackjs.com/configuration/devtool/
 	mode : 'production',//这项不配置的话运打包命令会报警告信息："WARNING in configuration The 'mode' option has not been set, ..."//development为开发者环境，production为生产环境变量 ，还有一个为none
     entry:{
         app:__dirname+'/src/app.js',//唯一入口文件,__dirname是nodejs里的一个全局变量，它指向的是我们项目的根目录
