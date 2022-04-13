@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmy_project"]=self["webpackChunkmy_project"]||[]).push([[858],{858:function(e,n,r){r.r(n),r.d(n,{default:function(){return l}});var t=r(3396),u=r(7139);const s={id:"vue"};function a(e,n,r,a,c,o){return(0,t.wg)(),(0,t.iD)("div",s," Hello Vue.js! "+(0,u.zw)(c.message),1)}var c={name:"HelloVue",data(){return{message:"吃饭"}}},o=r(89);const i=(0,o.Z)(c,[["render",a]]);var l=i}}]);
+//# sourceMappingURL=858.66d2eb2c.js.map
