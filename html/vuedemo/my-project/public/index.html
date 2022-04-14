@@ -28,4 +28,7 @@ npm 安装VUE（https://blog.csdn.net/quan20111992/article/details/105328706）(
 <!-- 打包： webpack.conf.js （打包配置文件）要自己创建文件并配置，然后将这个配置文件配置到package.json（前端项目配置文件 npm包管理）中（scripts 对应命令行命令，如 build 写成 webpack --config webpack.conf.js 则npm run build 就会执行webpack打包规则）  https://www.imooc.com/video/16402  -->
 <!-- webpack原生只支持处理JS文件类型，并且支持的语法知识ES5语法。如果import 的不是js文件或者超出他理解范围的语法时，需要用一些帮他处理这些语法的工具，在webpack.conf.js中配置module rules loader来帮他处理这些内容(如把.css style 图片等文件内容处理后转为JS文件) ，配置完要在命令行npm i css-loader 安装用到的对应loader才可以打包成功，这时import .css文件也是打包正常的 (https://www.imooc.com/video/16403)-->
 <!-- webpack-dev-server 环境-->
-<!--优化：  利用配置打包文件，将 类库代码vendor 或CSS代码 单独打包出来(如vendor.xxx.js，style.xxx.css)而不是都放入一个js文件-->
+<!--前端优化：  利用配置打包文件，将 类库代码vendor 或CSS代码 单独打包出来(如vendor.xxx.js，style.xxx.css)而不是都放入一个js文件-->
+
+<!--使用vue开发小程序：mpvue 继承自 Vue.js，其技术规范和语法特点与 Vue.js 保持一致。(http://mpvue.com/mpvue/#_1)-->
+
