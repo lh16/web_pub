@@ -12,10 +12,10 @@ module.exports = {//配置项参数说明：https://webpack.html.cn/   https://w
     }
 };
 //教程：https://cloud.tencent.com/developer/article/1195063
-//步骤总结： 安装nodejs；安装webpack;配置webpack.json；配置webpack.conf.js；命令行运行webpack命令；html引入打包后的js文件。
-//注意，命令行直接执行webpack，前提是全局安装了webpack，如果不是全局安装，还需要在后面加上入口文件的路径。
-//package.json文件scripts标签下：
-//"start":"webpack"     npm start 
+//步骤总结： 安装nodejs；新建项目目录进入目录执行npm init出现package.json项目配置文件；安装webpack（package.json文件中将出现webpack 版本）；配置webpack配置文件webpack.conf.js；命令行运行webpack命令打包；html引入打包后的js文件。
+//注意，命令行直接执行webpack，前提是全局安装了webpack，如果不是全局安装，还需要在后面加上入口文件的路径。如果不是全局安装webpack，也不想在后面加上入口文件的路径，因为这种写法比较麻烦，那怎么办呢？可以在package.json中设置start关键字。如下文：
+//package.json文件scripts标签下配置：
+//"start":"webpack"   则不不要运行全局的webpack 命令，只要运行  npm start 命令即可
 //"dev":"webpack"     npm run dev 
 //"dev":"webpack --mode development"     npm run dev   开发模式（与生产模式打包压缩后的代码不一样，体积较大）
 //"build":"webpack --mode production"     npm run build  生产模式（webpack 会将 production 作为 mode 的默认值去设置）
